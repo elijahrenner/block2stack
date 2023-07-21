@@ -1,0 +1,28 @@
+import math
+import time
+import os
+from operator import truediv, floordiv
+
+stack = int(64)
+
+print(' ')
+print('WELCOME TO THE # TO STACK CONVERTER BY ELIJAH RENNER')
+print(' ')
+print('Input anything besides a # of items to quit!')
+print(' ')
+
+while True:
+    try:
+        count = int(input("# of items: "))
+    except ValueError:
+        print(' ')
+        print("Sucessfully quit")
+        print(' ')
+        break
+
+    stacks = (count//stack)
+    remain = count-(stacks*64)
+
+    print(' ')
+    print(f'{stacks} stacks {remain} blocks')
+    print(' ')
